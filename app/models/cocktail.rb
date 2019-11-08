@@ -6,4 +6,5 @@ class Cocktail < ApplicationRecord
   # A cocktail must have a unique name.
   validates :name, presence: true
   validates :name, uniqueness: true
+  validates :image_url, presence: true
 end
