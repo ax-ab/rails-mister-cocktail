@@ -1,1 +1,87 @@
-// Specific CSS for your home-page
+/* hide horizontal scrollbars, since we use the vertical ones to scroll to the right */
+body.home
+{
+    overflow-x: hidden;
+}
+
+/**
+  * important: keep position fixed, you can however use top:0 instead of bottom:0
+  * if you want to make it stick to the top of the browser
+  */
+.scroll
+{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+}
+
+body.home {
+  padding: 0;
+  margin: 0;
+  font-family:'Open Sans', sans-serif;
+  font-weight: 300;
+  font-size: 16px;
+  color: #555;
+  background: black;
+}
+
+.horizon {
+  line-height: 0;
+  z-index: 100;
+  width: 3000px;
+}
+.middle {
+  line-height: 0;
+  z-index: 250;
+  width: 3844px;
+}
+.front {
+  z-index: 500;
+  top: 150px;
+  width: 6000px;
+}
+.intro {
+  position: absolute;
+  left: 500px;
+  top: 0px;
+  padding-right: 50px;
+  background: url('http://i.imgur.com/3woqwh2.png') no-repeat right 5px;
+}
+.page {
+  position: absolute;
+  width: 500px;
+  // height: 3 00px;
+  background: white;
+  padding: 10px 30px;
+  border: 1px #eee solid;
+  font-size: 75px;
+  font-weight: bolder;
+  line-height: 100px;
+}
+
+.panel0 {
+  top: -150px !important;
+  left: 0px;
+  width: 100vw;
+  height: 100vh;
+  background: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none !important;
+
+}
+
+.panel1 {
+  left: 1500px;
+}
+.panel2 {
+  left: 2575px;
+}
+.panel3 {
+  left: 3800px;
+}
+.panel4 {
+  left: 5100px;
+}

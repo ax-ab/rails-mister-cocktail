@@ -64,10 +64,6 @@ cocktails_hash.each do |key, value|
   cocktail.remote_user_image_url = value["user_image"]
   cocktail.save!
 end
-# url = "http://static.giantbomb.com/uploads/original/9/99864/2419866-nes_console_set.png"
-# article = Article.new(title: 'NES', body: "A great console")
-# article.remote_photo_url = url
-# article.save
 puts "Finished creating NC cocktails"
 
 ####################
@@ -76,7 +72,6 @@ cocktails_hash.each do |key, value |
   value["ingredients"].each { |ingredient| Ingredient.create!(name: ingredient) }
 end
 puts "Finished creating NC ingredients"
-
 
 ####################
 puts "Creating NC doses"

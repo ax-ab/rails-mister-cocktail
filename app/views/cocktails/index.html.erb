@@ -1,13 +1,19 @@
 <h1>Cocktails#index</h1>
 
-<ul>
-<% @cocktails.each do |cocktail| %>
-  <li>
-    <%= link_to cocktail.name, cocktail_path(cocktail) %>
-    <%= cl_image_tag cocktail.user_image, height: 50, width: 50, crop: :fill %>
-  </li>
-<% end %>
-</ul>
+<div>
+  <div class="container">
+    <div class="row">
+      <% @cocktails.each do |cocktail| %>
+        <% ran_num = rand(2..4) %>
+
+        <a class="col-<%= ran_num %> border" style="background-image: url('<%= cocktail.user_image %>'); background-size: cover; height: 200px" href="cocktails/<%= cocktail.id %>">
+
+          <%= cocktail.name %>
+        </a>
+      <% end %>
+    </div>
+  </div>
+</div>
 
 <hr>
 <%= link_to "Add new cocktail", new_cocktail_path %>
